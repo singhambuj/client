@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #005fff;
+    --primary-color: #748cf8;
     --primary-color-alpha: #005fff1a;
 }
 
@@ -27,7 +27,7 @@ body {
     justify-content: center;
 
     padding: 2rem;
-    background: #005fff;
+    background: #748cf8;
 }
 
 .auth__form-container_image {
@@ -384,7 +384,7 @@ body {
     background: linear-gradient(150.64deg,
             rgba(0, 0, 0, 0.1) 12.73%,
             rgba(0, 0, 0, 0) 89.32%),
-        #ffffff;
+        #2b7c94;
     border-radius: 9999px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.33);
 }
@@ -411,7 +411,7 @@ body {
     background: linear-gradient(150.64deg,
             rgba(0, 0, 0, 0.1) 12.73%,
             rgba(0, 0, 0, 0) 89.32%),
-        #ffffff;
+        #2b7c94;
     border-radius: 9999px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.33);
     cursor: pointer;
@@ -925,7 +925,7 @@ body {
 .team-channel-header__right-text {
     font-family: Helvetica Neue, sans-serif;
     font-size: 14px;
-    color: #858688;
+    color: #4a74ca;
 }
 
 .team-channel-list {
@@ -935,7 +935,7 @@ body {
 }
 
 .team-channel-list__message {
-    color: #ffffff;
+    color: #5aa0cb;
     padding: 0 16px;
 }
 
@@ -959,7 +959,7 @@ body {
     font-size: 13px;
     line-height: 16px;
     height: 16px;
-    color: rgba(255, 255, 255, 0.66);
+    color: rgb(0, 0, 0);
     margin-bottom: 10px;
 }
 
@@ -996,7 +996,7 @@ body {
     align-items: center;
     font-family: Helvetica Neue, sans-serif;
     font-size: 14px;
-    color: #ffffff;
+    color: #2b7c94;
     padding: 0px 20px;
     height: 100%;
     width: 100%;

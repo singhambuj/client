@@ -3,7 +3,7 @@ import { ChannelList, useChatContext } from "stream-chat-react";
 import Cookies from "universal-cookie";
 
 import { ChannelSearch, TeamChannelList, TeamChannelPreview } from "./";
-import LetsTalk from "../assets/letstalk.png";
+import HaulChat from "../assets/haulchat.png";
 import LogoutIcon from "../assets/logout.png";
 
 const cookies = new Cookies();
@@ -12,7 +12,7 @@ const SideBar = ({ logout }) => (
 	<div className="channel-list__sidebar">
 		<div className="channel-list__sidebar__icon1">
 			<div className="icon1__inner">
-				<img src={LetsTalk} alt="LetsTalk" width="30" />
+				<img src={HaulChat} alt="HaulChat" width="30" />
 			</div>
 		</div>
 		<div className="channel-list__sidebar__icon2">
@@ -25,7 +25,7 @@ const SideBar = ({ logout }) => (
 
 const CompanyHeader = () => (
 	<div className="channel-list__header">
-		<p className="channel-list__header__text">LetsTalk</p>
+		<p className="channel-list__header__text">HaulChat</p>
 	</div>
 );
 
@@ -63,7 +63,7 @@ const ChannelListContent = ({
 			<SideBar logout={logout} />
 			<div className="channel-list__list__wrapper">
 				<CompanyHeader />
-				<ChannelSearch  setToggleContainer={setToggleContainer}/>
+				<ChannelSearch setToggleContainer={setToggleContainer} />
 				<ChannelList
 					filters={filters}
 					channelRenderFilterFn={customChannelTeamFilter} // be careful in future it's removing parentheses ( ) on save.
