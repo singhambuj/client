@@ -1,13 +1,10 @@
 import React, { useState } from "react";
 import { useChatContext } from "stream-chat-react";
 
-import { UserLIst } from "./";
+import { UserList } from "./";
 import { CloseCreateChannel } from "../assets";
 
 const ChannelNameInput = ({ channelName = "", setChannelName }) => {
-	const { client, setActiveChannel } = useChatContext();
-	const [selectedUsers, setSelectedUsers] = useState([client.userID || ""]);
-
 	const handleChange = (event) => {
 		event.preventDefault();
 
@@ -20,9 +17,9 @@ const ChannelNameInput = ({ channelName = "", setChannelName }) => {
 			<input
 				value={channelName}
 				onChange={handleChange}
-				placeholder="channel-name"
+				placeholder="group-name"
 			/>
-			<p>Add Members</p>
+			<p>Add People</p>
 		</div>
 	);
 };
@@ -57,7 +54,7 @@ const CreateChannel = ({ createType, setIsCreating }) => {
 				<p>
 					{" "}
 					{createType === "team"
-						? "Create a New Channel"
+						? "Create a New Group"
 						: "Send a Direct Message"}
 				</p>
 				<CloseCreateChannel setIsCreating={setIsCreating} />
@@ -68,7 +65,7 @@ const CreateChannel = ({ createType, setIsCreating }) => {
 					setChannelName={setChannelName}
 				/>
 			)}
-			<UserLIst setSelectedUsers={setSelectedUsers} />{" "}
+			<UserList setSelectedUsers={setSelectedUsers} />{" "}
 			{/* //! see if here is any problem cause by syntax */}
 			<div className="create-channel__button-wrapper" onClick={createChannel}>
 				<p>

@@ -26,16 +26,16 @@ const Auth = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 
-		const { fullName, username, password, phoneNumber, avatarURL } = form;
+		const { username, password, phoneNumber, avatarURL } = form;
 
 		const URL = "http://localhost:5000/auth";
 
 		const {
-			data: { token, userId, hashedPassword },
+			data: { token, userId, hashedPassword, fullName }, // if you remove full name from here the data will be passed as empty string in full name so full name will not be visible
 		} = await axios.post(`${URL}/${isSignup ? "signup" : "login"}`, {
 			username,
 			password,
-			fullName,
+			fullName: form.fullName, // if you remove full name from here the data will be passed as empty string in full name so full name will not be visible
 			phoneNumber,
 			avatarURL,
 		});
